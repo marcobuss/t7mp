@@ -18,20 +18,20 @@ package com.googlecode.t7mp;
 import java.util.HashMap;
 import java.util.Map;
 
-import junit.framework.Assert;
+import org.apache.catalina.startup.*;
+import org.apache.maven.plugin.*;
+import org.junit.*;
+import org.junit.runner.*;
+import org.mockito.*;
+import org.powermock.api.mockito.*;
+import org.powermock.core.classloader.annotations.*;
+import org.powermock.modules.junit4.*;
 
-import org.apache.catalina.startup.Bootstrap;
-import org.apache.maven.plugin.MojoExecutionException;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mockito;
-import org.powermock.api.mockito.PowerMockito;
-import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.powermock.modules.junit4.PowerMockRunner;
+import junit.framework.Assert;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({ Bootstrap.class })
+@Ignore
 public class StopMojoTest {
 
     private Bootstrap bootstrap;
